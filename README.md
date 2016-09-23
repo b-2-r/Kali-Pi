@@ -114,6 +114,16 @@ Manually start vino.
 $ /usr/lib/vino/vino-server &
 ```
 
+### Setup Environment
+
+```sh
+$ apt-get install vim
+$ apt-get install zsh
+$ apt-get install wget
+$ sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+$ [...]
+```
+
 ### Install Development Tools
 
 ```sh
