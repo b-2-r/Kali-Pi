@@ -104,3 +104,11 @@ Name=Vino
 Exec=/usr/lib/vino/vino-server
 NoDisplay=true
 ```
+
+Manually start vino...
+
+```sh
+$ /usr/lib/vino/vino-server &
+```
+
+... or reboot.
