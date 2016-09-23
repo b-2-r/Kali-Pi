@@ -121,6 +121,7 @@ $ apt-get install vim
 $ apt-get install zsh
 $ apt-get install wget
 $ sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+$ git clone https://github.com/amix/vimrc.git ~/.vim_runtime && sh ~/.vim_runtime/install_awesome_vimrc.sh
 $ [...]
 ```
 
