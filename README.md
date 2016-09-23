@@ -35,4 +35,72 @@ $ dpkg-reconfigure keyboard-configuration
 $ reboot
 ```
 
-***Wifi***
+***Change password***
+
+```sh
+$ passwd
+...
+```
+
+***Change SSH host keys***
+
+```sh
+$ rm /etc/ssh/ssh_host_*
+$ dpkg-reconfigure openssh-server
+$ service ssh restart
+```
+
+***WIFI***
+
+Generate PSK.
+
+```sh
+$ wpa_passphrase [SSID] | grep psk | tail -n1 >> /etc/network/interfaces
+```
+
+Add wlan0 to /etc/network/interfaces.
+
+```sh
+auto wlan0
+iface wlan0 inet dhcp
+   wpa-ssid [SSID]
+   wpa-psk [Generated PSK]
+```
+
+Reboot to apply changes.
+
+```sh
+reboot
+```
+
+***Vino***
+
+Install vino.
+
+```sh
+$ apt-get update
+$ apt-get install vino
+```
+
+Disable encryption and confirmation.
+
+```sh
+$ gsettings set org.gnome.Vino require-encryption false
+$ gsettings set org.gnome.Vino prompt-enabled false
+```
+
+Create a desktop entry to let vino autostart.
+
+```sh
+cd ~/.config && mkdir autostart && cd autostart && touch vino.desktop && vim.tiny vino.desktop 
+```
+
+Add the following lines.
+
+```sh
+[Desktop Entry]
+Type=Application
+Name=Vino
+Exec=/usr/lib/vino/vino-server
+NoDisplay=true
+```
