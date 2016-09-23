@@ -129,3 +129,10 @@ $ [...]
 $ apt-get install radare2
 $ [...]
 ```
+
+### Install All
+
+```sh
+$ apt-get install kali-linux-full
+$ [...]
+```
