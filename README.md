@@ -134,5 +134,4 @@ $ [...]
 
 ```sh
 $ apt-get install kali-linux-full
-$ [...]
 ```
