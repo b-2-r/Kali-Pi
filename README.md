@@ -113,3 +113,18 @@ Manually start vino.
 ```sh
 $ /usr/lib/vino/vino-server &
 ```
+
+### Install Development Tools
+
+```sh
+$ apt-get install gcc
+$ apt-get install lldb
+[...]
+```
+
+### Install Reverse Engineering Tools
+
+```sh
+$ apt-get install radare2
+[...]
+```
