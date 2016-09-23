@@ -61,7 +61,7 @@ $ wpa_passphrase [SSID] | grep psk | tail -n1 >> /etc/network/interfaces
 Add Wi-Fi settings to /etc/network/interfaces.
 
 ```sh
-cat /etc/network/interfaces
+$ cat /etc/network/interfaces
 [...]
 auto wlan0
 iface wlan0 inet dhcp
@@ -73,7 +73,7 @@ iface wlan0 inet dhcp
 Reboot to apply changes.
 
 ```sh
-reboot
+$ reboot
 ```
 
 ***Vino (VNC Server)***
@@ -95,7 +95,7 @@ $ gsettings set org.gnome.Vino prompt-enabled false
 Create a desktop entry to let vino autostart (after login).
 
 ```sh
-cd ~/.config && mkdir autostart && cd autostart && vim.tiny vino.desktop 
+$ cd ~/.config && mkdir autostart && cd autostart && vim.tiny vino.desktop 
 ```
 
 Add the following lines to vino.desktop.
@@ -120,12 +120,12 @@ $ /usr/lib/vino/vino-server &
 $ apt-get install gcc
 $ apt-get install gdb
 $ apt-get install lldb
-[...]
+$ [...]
 ```
 
 ### Install Reverse Engineering Tools
 
 ```sh
 $ apt-get install radare2
-[...]
+$ [...]
 ```
