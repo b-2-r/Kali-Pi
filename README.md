@@ -118,6 +118,7 @@ $ /usr/lib/vino/vino-server &
 
 ```sh
 $ apt-get install gcc
+$ apt-get install gdb
 $ apt-get install lldb
 [...]
 ```
