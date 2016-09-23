@@ -92,7 +92,7 @@ $ gsettings set org.gnome.Vino prompt-enabled false
 Create a desktop entry to let vino autostart.
 
 ```sh
-cd ~/.config && mkdir autostart && cd autostart && touch vino.desktop && vim.tiny vino.desktop 
+cd ~/.config && mkdir autostart && cd autostart && vim.tiny vino.desktop 
 ```
 
 Add the following lines.
