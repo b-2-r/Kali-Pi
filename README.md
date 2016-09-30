@@ -39,7 +39,7 @@ Change root passwort.
 
 ```sh
 $ passwd
-...
+[...]
 ```
 
 Change SSH host keys.
