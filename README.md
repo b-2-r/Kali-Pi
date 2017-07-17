@@ -1,6 +1,6 @@
 # Kali-Pi
 
-Install and setup Kali Linux Raspberry Pi image using OS X.
+Install and setup Kali Linux Raspberry Pi image using macOS.
 
 ### Install Kali Linux
 
