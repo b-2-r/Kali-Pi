@@ -1,3 +1,7 @@
+# Kali-Pi
+
+Install and setup Kali Linux Raspberry Pi image using OS X.
+
 ### Install Kali Linux
 
 Look at the partition table to identify SD card.
