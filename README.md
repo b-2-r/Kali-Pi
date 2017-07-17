@@ -6,7 +6,7 @@ Install and setup Kali Linux Raspberry Pi image using OS X.
 
 Look at the partition table to identify SD card.
 
-```sh
+```
 $ diskutil list
 [...]
 /dev/disk2 (external, physical):
@@ -19,13 +19,13 @@ $ diskutil list
 
 Format SD card to FAT32.
 
-```sh
+```
 $ sudo diskutil eraseDisk FAT32 KALI MBRFormat /dev/disk2
 ```
 
 Transfer Kali Linux img file to SD card.
 
-```sh
+```
 $ sudo diskutil unmountDisk /dev/disk2 # First unmount device.
 $ sudo dd if=kali-2.1.2-rpi2.img of=/dev/disk2 bs=512k # See status with INFO signal (Ctrl+T).
 ```
@@ -34,21 +34,21 @@ $ sudo dd if=kali-2.1.2-rpi2.img of=/dev/disk2 bs=512k # See status with INFO si
 
 Change keyboard layout if needed.
 
-```sh
+```
 $ dpkg-reconfigure keyboard-configuration
 $ reboot
 ```
 
 Change root passwort.
 
-```sh
+```
 $ passwd
 [...]
 ```
 
 Change SSH host keys.
 
-```sh
+```
 $ rm /etc/ssh/ssh_host_*
 $ dpkg-reconfigure openssh-server
 $ service ssh restart
@@ -58,13 +58,13 @@ $ service ssh restart
 
 Generate pre-shared key.
 
-```sh
+```
 $ wpa_passphrase [SSID] | grep psk | tail -n1 >> /etc/network/interfaces
 ```
 
 Add Wi-Fi settings to /etc/network/interfaces.
 
-```sh
+```
 $ cat /etc/network/interfaces
 [...]
 auto wlan0
@@ -76,7 +76,7 @@ iface wlan0 inet dhcp
 
 Reboot to apply changes.
 
-```sh
+```
 $ reboot
 ```
 
@@ -84,27 +84,27 @@ $ reboot
 
 Install vino.
 
-```sh
+```
 $ apt-get update
 $ apt-get install vino
 ```
 
 Disable encryption and confirmation prompt.
 
-```sh
+```
 $ gsettings set org.gnome.Vino require-encryption false
 $ gsettings set org.gnome.Vino prompt-enabled false
 ```
 
 Create a desktop entry to let vino autostart (after login).
 
-```sh
+```
 $ cd ~/.config && mkdir autostart && cd autostart && vim.tiny vino.desktop 
 ```
 
 Add the following lines to vino.desktop.
 
-```sh
+```
 [Desktop Entry]
 Type=Application
 Name=Vino
@@ -114,13 +114,13 @@ NoDisplay=true
 
 Manually start vino.
 
-```sh
+```
 $ /usr/lib/vino/vino-server &
 ```
 
 ### Setup Environment
 
-```sh
+```
 $ apt-get install vim
 $ apt-get install zsh
 $ apt-get install wget
@@ -131,7 +131,7 @@ $ [...]
 
 ### Install Development Tools
 
-```sh
+```
 $ apt-get install gcc
 $ apt-get install gdb
 $ apt-get install lldb
@@ -140,13 +140,13 @@ $ [...]
 
 ### Install Reverse Engineering Tools
 
-```sh
+```
 $ apt-get install radare2
 $ [...]
 ```
 
 ### Install All
 
-```sh
+```
 $ apt-get install kali-linux-full
 ```
